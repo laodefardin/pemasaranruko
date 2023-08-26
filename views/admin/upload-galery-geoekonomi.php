@@ -1,10 +1,10 @@
 <?php
-$title = 'Data GeoEkonomi';
+$title = 'Data Galery Geoekonomi';
 include "templates/header.php";
 include "templates/navbar.php";
 include "templates/sidebar.php";
-
-$query = $koneksi->query("SELECT * FROM tb_geoekonomi");
+$id = $_GET['id'];
+$query = $koneksi->query("SELECT * FROM tb_galery_geoekonomi WHERE id = $id ");
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -45,30 +45,27 @@ $query = $koneksi->query("SELECT * FROM tb_geoekonomi");
   <section class="content">
 
     <!-- Default box -->
-    <div class="card">
+    <!-- <div class="container-fluid col-sm-8"></div> -->
+    <div class="container-fluid col-sm-8 card">
       <div class="card-header">
-        <h3 class="card-title">Data Semua GeoEkonomi</h3>
+        <h3 class="card-title">Data Semua Galery GeoEkonomi : <?= $_GET['judul']; ?></h3>
 
         <div class="card-tools">
-          <a href="tambah-geoekonomi" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus"></i> Tambah
-            data</a>
+          <a href="data-geoekonomi" class="btn btn-sm btn-secondary pull-left"><i class="fas fa-arrow-left"></i>
+            Kembali</a>
+          <a href="upload-photo-geoekenomi?id=<?= $_GET['id']; ?>&judul=<?= $_GET['judul']; ?>"
+            class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus"></i> Tambah Galery</a>
         </div>
       </div>
       <div class="card-body" style="display: block;">
         <table id="example1" class="table table-striped">
           <thead>
             <tr>
-              <th style="width: 1%">
+              <th style="width: 20%">
                 #
               </th>
-              <th style="width: 30%">
-                Judul
-              </th>
-              <th style="width: 10%">
-                Penulis
-              </th>
-              <th style="width: 15%" class="text-center">
-                Tanggal
+              <th style="width: 15%">
+                Foto
               </th>
               <th style="width: 30%">
               </th>
@@ -83,36 +80,14 @@ $query = $koneksi->query("SELECT * FROM tb_geoekonomi");
                 <?= $nomor_urut ?>
               </td>
               <td>
-                <a>
-                  <?= $data['judul']; ?>
-                </a>
-              </td>
-              <td>
-                <?= $data['penulis']; ?>
-              </td>
-              <td class="text-center">
-                Telah Terbit
-                <?= $data['tanggal'] ?>
+                <div class="card mb-2 bg-gradient-dark">
+                  <a href="../../assets/image/foto_galery/<?= $data['foto'] ?>" data-fancybox="gal"><img
+                      src="../../assets/image/foto_galery/<?= $data['foto'] ?>" alt="Image" class="img-fluid"></a>
               </td>
               <td class="project-actions text-right">
-                <a class="btn btn-primary btn-sm" href="upload-galery-geoekonomi?id=<?= $data['id']; ?>&judul=<?=$data['judul']?>">
-                  <i class="fas fa-upload">
-                  </i>
-                  Galery GeoEkonomi
-                </a>
-                <a class="btn btn-info btn-sm" href="data-geoekonomi-edit?id=<?= $data['id'] ?>">
-                  <i class="fas fa-edit">
-                  </i>
-                  Edit
-                </a>
-                <a class="btn btn-warning btn-sm" target="_blank"
-                  href="../../informasi-geoekonomi?id=<?=$data['id']?>&s=<?= $data['slug']?>">
-                  <i class="fas fa-eye">
-                  </i>
-                  View
-                </a>
                 <a class="btn btn-danger btn-sm tombol-hapus" data-toggle="tooltip" data-placement="top" title=""
-                  data-original-title="Hapus" href="../../app/controller/proses-delete-geoekonomi?id=<?= $data['id']?>">
+                  data-original-title="Hapus"
+                  href="../../app/controller/proses-delete-galerygeoekonomi?id=<?= $data['id_galery_geoekonomi']?>&judul=<?= $_GET['judul'] ?>">
                   <i class="fas fa-trash">
                   </i>
                   Delete
@@ -127,7 +102,7 @@ $query = $koneksi->query("SELECT * FROM tb_geoekonomi");
           </tbody>
         </table>
       </div>
-
+      <!-- /.card-body -->
     </div>
     <!-- /.card -->
 

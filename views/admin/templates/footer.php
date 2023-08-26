@@ -60,6 +60,60 @@
       //Initialize Select2 Elements
       $('.select2').select2()
     </script>
+    <script>
+      $(function () {
+        //Add text editor
+        $('#compose2-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose3-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose4-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose5-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose6-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose7-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose8-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose9-textarea').summernote()
+      })
+    </script>
+        <script>
+      $(function () {
+        //Add text editor
+        $('#compose10-textarea').summernote()
+      })
+    </script>
 
     <script>
       $(function () {

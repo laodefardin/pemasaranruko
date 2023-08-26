@@ -57,6 +57,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Google Font: Source Sans Pro -->
 
     <style>
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            color: #fff;
+            background-color: #2951a3;
+        }
+
         .navbar-light .navbar-nav .nav-link {
             color: rgb(228 228 228)
         }

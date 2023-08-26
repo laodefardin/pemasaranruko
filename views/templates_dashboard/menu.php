@@ -26,9 +26,9 @@
          <li class="nav-item">
            <a href="informasi-geoekonomi" class="nav-link">Informasi Geoekonomi</a>
          </li>
-         <li class="nav-item">
+         <!-- <li class="nav-item">
            <a href="destinasi-wisata" class="nav-link">Destinasi Wisata</a>
-         </li>
+         </li> -->
          <!-- <li class="nav-item">
               <a href="kontak" class="nav-link">Hubungi Kami</a>
             </li> -->

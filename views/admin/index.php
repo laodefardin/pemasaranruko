@@ -37,7 +37,7 @@ $data = mysqli_fetch_assoc($query);
           </div>
         </div>
 
-        <div class="col-lg-2 col-6">
+        <div class="col-lg-3  col-6">
                 <!-- small box -->
                 <div class="small-box bg-lightblue">
                     <div class="inner">
@@ -53,7 +53,7 @@ $data = mysqli_fetch_assoc($query);
                 </div>
             </div>
 
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-3  col-6">
                 <!-- small box -->
                 <div class="small-box bg-navy">
                     <div class="inner">
@@ -69,23 +69,7 @@ $data = mysqli_fetch_assoc($query);
                 </div>
             </div>
 
-            <div class="col-lg-2 col-6">
-                <!-- small box -->
-                <div class="small-box bg-lightblue">
-                    <div class="inner">
-                        <?php
-              $sql = "SELECT count(id) as a FROM tb_destinasiwisata";
-              $query = mysqli_query($koneksi, $sql);
-              $data = mysqli_fetch_assoc($query);
-              ?>
-                        <h3><?= $data['a']; ?></h3>
-                        <p>Jumlah Data Destinasi Wisata</p>
-                    </div>
-                    <a href="data-geoekonomi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-3  col-6">
                 <!-- small box -->
                 <div class="small-box bg-lightblue">
                     <div class="inner">
@@ -101,7 +85,7 @@ $data = mysqli_fetch_assoc($query);
                 </div>
             </div>
 
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-3  col-6">
                 <!-- small box -->
                 <div class="small-box bg-navy">
                     <div class="inner">
@@ -117,8 +101,8 @@ $data = mysqli_fetch_assoc($query);
                 </div>
             </div>
 
-            <div class="col-lg-2 col-6">
-                <!-- small box -->
+            <!-- <div class="col-lg-3  col-6">
+                
                 <div class="small-box bg-lightblue">
                     <div class="inner">
                         <?php
@@ -131,7 +115,7 @@ $data = mysqli_fetch_assoc($query);
                     </div>
                     <a href="data-pengguna" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-            </div>
+            </div> -->
 
       </div>
       <!-- /.row -->

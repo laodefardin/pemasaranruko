@@ -27,25 +27,92 @@ if (isset($_GET['id'])){ ?>
   $date = $parts[0];
   ?>
 <div class="content">
-  <div class="row">
-    <div class="container-fluid col-sm-12 col-md-5">
-      <div class="news-content" style="max-width: 726px; margin: 80px auto 0;">
-        <a class="news-back" href="./informasi-geoekonomi">Kembali</a>
-
-        <h2 class="news-title"><?= $data['judul'] ?></h2>
-        <span class="date"><?= tgl_indo($date)  ?> </span>
-
-        <img class="img-fluid pad" src="./assets/image/foto_geoekonomi/<?= $data['foto'] ?>" alt="Photo">
-
-        <div class="text-md">
-          <?= $data['isi_informasi'] ?>
+  <div class="container">
+    <div class="row no-padding mt-2">
+      <div class="col-sm-12">
+        <div class="text-white"
+          style="background: url('./assets/image/foto_geoekonomi/<?= $data['foto'] ?>') center center; height: 450px;">
+          <div class="text-left"
+            style=" height: auto; width: 100%; padding: 8px 16px; background: linear-gradient(180deg,transparent 0,#00000080); background-repeat: repeat-x; padding-top: 443px;">
+          </div>
         </div>
-        <div class="news-share" style="border:none;">
-          <!-- <span class="share-text">Bagikan Berita ini :</span> -->
+
+        <div class="row no-padding mt-2">
+          <div class="col-lg-8">
+            <div class="news-content" style="max-width: 1082px; margin: 34px auto 0;">
+              <a class="news-back" href="./informasi-geoekonomi">Kembali</a>
+
+              <h2 class="news-title"><?= $data['judul'] ?></h2>
+              <span class="date"><?= tgl_indo($date)  ?> </span>
+              <div class="text-md">
+                <?= $data['isi_informasi'] ?>
+              </div>
+
+
+              <h2 class="news-title">Galery</h2>
+
+              <p>
+                <div class="col-md-12">
+                  <div class="row">
+                    <?php
+                        $query1 = $koneksi->query("SELECT * FROM tb_galery_geoekonomi WHERE id = '$id' ");
+                        if ($query1->num_rows > 0) {
+                        $nomor_urut = 1;
+                        foreach ($query1 as $gal): ?>
+                    <div class="col-sm-6 col-md-4 mb-4 p-1">
+                      <a href="./assets/image/foto_galery/<?= $gal['foto'] ?>" data-fancybox="gal">
+                        <img src="./assets/image/foto_galery/<?= $gal['foto'] ?>" alt="Image" class="img-fluid"
+                          style="border-radius: 4px;">
+                      </a>
+                    </div>
+                    <?php endforeach; mysqli_free_result($query1);
+                          } else {
+                          echo '<blockquote>
+                                <a class="text-md">Tidak ada foto yang tersedia.</a>
+                                </blockquote>'; } ?>
+                  </div>
+                </div>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card-primary" style="box-shadow: none;">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <?php
+                  $query = $koneksi->query("SELECT * FROM tb_konfigurasi");$konf = mysqli_fetch_assoc($query);?>
+                  <img class="profile-user-img img-fluid img-circle" src="./assets/image/sistem/<?= $konf['logo'] ?>"
+                    alt="User profile picture" style="border: none;width: 250px;border-radius: unset;">
+                </div>
+
+                <h3 class="profile-username text-center">
+                  <?php
+                  echo $konf['nama_perusahaan'];
+                  ?>
+                </h3>
+                <p class="text-muted text-center">Official Developer</p>
+              </div>
+              <hr>
+              <div class="card-footer box-profile" style="background-color: #fff;">
+                <!-- <div class="alert" style="background-color: #2951a3; color:#fff;font-size: 15px; text-align: center;">
+                  <p id="msg-text">Jika Anda merasa tertarik dengan ruko ini, jangan ragu untuk mendaftar dan
+                    menghubungi tim pengembang kami untuk informasi lebih lanjut.</p>
+                </div> -->
+                <a href="properti" type="submit" class="btn btn-secondary btn-block"><b>Cek Ruko Terbaik Kami</b></a>
+
+              </div>
+              <!-- /.card-body -->
+            </div>
+
+          </div>
         </div>
+
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <div class="news-related news-list">
@@ -106,27 +173,27 @@ if (isset($_GET['id'])){ ?>
         ?>
 
         <div class="">
-        <li class="list-item clearfix" style="height:144px;">
-          <div class="thumbnail"><img src="./assets/image/foto_geoekonomi/<?= $data['foto'] ?>">
-          </div>
-          <div class="description">
-            <a class="title"
-              href="./informasi-geoekonomi?id=<?=$data['id']?>&s=<?= $data['slug']?>"><?= $data['judul'] ?></a>
-            <span class="date">
-              <?php
+          <li class="list-item clearfix" style="height:144px;">
+            <div class="thumbnail"><img src="./assets/image/foto_geoekonomi/<?= $data['foto'] ?>">
+            </div>
+            <div class="description">
+              <a class="title"
+                href="./informasi-geoekonomi?id=<?=$data['id']?>&s=<?= $data['slug']?>"><?= $data['judul'] ?></a>
+              <span class="date">
+                <?php
             $dateTime = $data['tanggal'];
             $parts = explode(" ", $dateTime);
             $date = $parts[0];
             ?>
-              <?= tgl_indo($date)  ?> </span>
-            <text class="excerpt">
-              <?php
+                <?= tgl_indo($date)  ?> </span>
+              <text class="excerpt">
+                <?php
                   $num_char = 100;
                   $text = $data['isi_informasi'];
                   echo substr($text, 0, $num_char) . '...';
                   ?></text>
-          </div>
-        </li>
+            </div>
+          </li>
         </div>
 
         <?php $no++; }?>

@@ -75,12 +75,12 @@
                     <p>Data Geoekonomi</p>
                   </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="data-destinasi-wisata" class="nav-link <?php if($title == 'Edit Informasi Destinasi Wisata' OR $title == 'Tambah Informasi Destinasi Wisata' OR $title == 'Data Destinasi Wisata') echo 'active' ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Data Destinasi Wisata</p>
                   </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a href="./data-pengguna" class="nav-link <?php if($title == 'Data Pengguna') echo 'active' ?>">
                     <i class="far fa-circle nav-icon"></i>

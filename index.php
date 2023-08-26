@@ -146,10 +146,9 @@ include "views/templates_dashboard/carousell.php";
       </div>
 
 
-      <div class="news-list container" style="text-align: center; padding: 14px 0;padding-bottom: 70px;">
+      <!-- <div class="news-list container" style="text-align: center; padding: 14px 0;padding-bottom: 70px;">
         <div class="list-header">
           <h2>Destinasi Wisata</h2>
-          <!-- <small>Informasi destinasi wisata lainnya...</small> -->
         </div>
         <div class="row">
           <?php
@@ -171,9 +170,8 @@ include "views/templates_dashboard/carousell.php";
           <a style="text-align: center; padding: 1px 0;" class="float-right text-center"
             href="./destinasi-wisata">&nbsp; &nbsp; Informasi destinasi wisata lainnya...</a>
         </div>
+      </div> -->
 
-
-      </div>
     </div>
   </div>
 </div>
