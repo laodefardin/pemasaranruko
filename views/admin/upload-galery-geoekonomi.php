@@ -87,7 +87,7 @@ $query = $koneksi->query("SELECT * FROM tb_galery_geoekonomi WHERE id = $id ");
               <td class="project-actions text-right">
                 <a class="btn btn-danger btn-sm tombol-hapus" data-toggle="tooltip" data-placement="top" title=""
                   data-original-title="Hapus"
-                  href="../../app/controller/proses-delete-galerygeoekonomi?id=<?= $data['id_galery_geoekonomi']?>&judul=<?= $_GET['judul'] ?>">
+                  href="../../app/controller/proses-delete-galerygeoekonomi?id=<?= $data['id_galery_geoekonomi']?>&judul=<?= $_GET['judul'] ?>&id_geoekonomi=<?= $_GET['id']; ?>">
                   <i class="fas fa-trash">
                   </i>
                   Delete

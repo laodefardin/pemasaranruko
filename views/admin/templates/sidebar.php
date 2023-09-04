@@ -70,7 +70,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="./data-geoekonomi" class="nav-link <?php if($title == 'Data GeoEkonomi' OR $title == 'Tambah Informasi Geoekonomi' OR $title == 'Edit Informasi Geoekonomi') echo 'active' ?>">
+                  <a href="./data-geoekonomi" class="nav-link <?php if($title == 'Data GeoEkonomi' OR $title == 'Tambah Informasi Geoekonomi' OR $title == 'Edit Informasi Geoekonomi' OR $title == 'Data Galery Geoekonomi' OR $title == 'Upload Photo Galery Geoekonomi') echo 'active' ?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Data Geoekonomi</p>
                   </a>

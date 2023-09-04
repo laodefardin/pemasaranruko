@@ -8,6 +8,7 @@ if ($koneksi->connect_error) {
     die("Connection failed: " . $koneksi->connect_error);
 }
 
+$id_geoekonomi = $_GET['id_geoekonomi'];
 $id = $_GET['id'];
 $judul = $_GET['judul'];
 $hapus = "DELETE FROM tb_galery_geoekonomi WHERE id_galery_geoekonomi   = '$id'";
@@ -23,5 +24,5 @@ $koneksi->query($delproperti);
 $koneksi->query($hapus);
 $_SESSION['pesan'] = 'Data Berhasil Di Hapus';
 $_SESSION['status'] = 'success';
-echo "<script> document.location.href='../../views/admin/upload-galery-geoekonomi?id=$id&judul=$judul';</script>";
+echo "<script> document.location.href='../../views/admin/upload-galery-geoekonomi?id=$id_geoekonomi&judul=$judul';</script>";
 die();

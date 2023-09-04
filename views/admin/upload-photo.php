@@ -60,7 +60,7 @@ include "templates/sidebar.php";
                     <input type="text" value="<?= $_GET['idlisting']; ?>" name="idlisting" hidden>
 
                         <div class="custom-file">
-                          <input class="custom-file-input" id="customFile" type="file" name="foto">
+                          <input class="custom-file-input" id="customFile" type="file" name="foto" required>
                           <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
                         <small class="form-text text-muted">Upload Gambar Galery usahakan memiliki ukuran yang sama pada gambar yang di upload sebelumnya.</small>
