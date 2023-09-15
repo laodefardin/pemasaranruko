@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 04, 2023 at 02:34 AM
+-- Generation Time: Sep 15, 2023 at 12:56 PM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.33
 
@@ -69,8 +69,6 @@ CREATE TABLE `tb_galery` (
 
 INSERT INTO `tb_galery` (`id`, `id_listing`, `foto`) VALUES
 (30, '', '0420231606thScreenshot 2023-06-19 114756.png'),
-(53, '123', '1820231341thruko 2.webp'),
-(54, '123', '1820231341thWhatsApp Image 2023-07-25 at 22.46.18.jpeg'),
 (55, '29090', '1820231342thruko 2.webp'),
 (56, '29090', '1820231342thWhatsApp Image 2023-07-25 at 22.46.18.jpeg'),
 (57, '94452', '1820231345thruko 2.webp'),
@@ -277,7 +275,6 @@ CREATE TABLE `tb_properti` (
 --
 
 INSERT INTO `tb_properti` (`id_listing`, `slug`, `judul`, `dekskripsi`, `lokasiterdekat`, `kabkota`, `kondisibangunan`, `statussertifikat`, `hargajual`, `luasbangunan`, `arahmenghadap`, `jumlahlantai`, `jalurmobil`, `pasokanairpam`, `jmlkamartidur`, `hargasewa`, `luastanah`, `jmlkamarmandi`, `jmlgarasi`, `pasokanairtanah`, `interior`, `dayalistrik`, `tgl_buat`, `tgl_ubah`, `statusproperti`) VALUES
-(123, 'property-ruko-2-lantai-timbun-perdana-abadi-kabupaten-bone', 'Property Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone', 'Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone, Provinsi Sulawesi Selatan  Luas Tanah 4,5 x 18,5m Luas Bangunan 8  x 37m x 2Lt , Ruangan 2 Kamar tidur, 3 Kamar Mandi PLN 2000w,  Air Bor Bawah Tanah Kawasan  Kota, Untuk usaha Klinik, Restoran, Berbagai Usaha Harga Jual 900 Juta Nego \r\n\r\nHubungi : (0812) 4520 7650\r\nAlamat Kantor : Jl. Pramuka, Kabupaten Bone \r\nEmail : timbunperdanaabadi@gmail.com', 'Dekat dari Pelabuhan Bajoe, Kantor Polisi, Indomaret', 'Kabupaten Bone, Sulawesi Selatan', 'Baru', 'Sertifikat Hak Milik (SHM)', 'Rp 900 Juta', '166,5', 'Selatan Barat', '2', '1', 'Tidak', '2', 'Rp 65 Juta', '84', '3', '0', 'Ya', 'Minimalis', '2000', '2023-08-03 20:43:33', '2023-08-18 22:42:27', 0),
 (29090, 'property-ruko-2-lantai-timbun-perdana-abadi-kabupaten-bone', 'Property Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone', 'Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone, Provinsi Sulawesi Selatan Luas Tanah 4,5 x 18,5m Luas Bangunan 8 x 37m x 2Lt , Ruangan 2 Kamar tidur, 3 Kamar Mandi PLN 2000w, Air Bor Bawah Tanah Kawasan Kota, Untuk usaha Klinik, Restoran, Berbagai Usaha Harga Jual 900 Juta Nego Hubungi : (0812) 4520 7650 Alamat Kantor : Jl. Pramuka, Kabupaten Bone Email : timbunperdanaabadi@gmail.com', 'Dekat dari Pelabuhan Bajoe, Kantor Polisi, Indomaret', 'Kabupaten Bone, Sulawesi Selatan', 'Baru', 'Sertifikat Hak Milik (SHM)', 'Rp 900 Juta', '166,5', 'Selatan Barat', '2', '1', 'Tidak', '2', 'Rp 65 Juta', '84', '3', '0', 'Ya', 'Minimalis', '2000', '2023-08-03 20:43:33', '2023-08-18 22:42:56', 0),
 (94452, 'property-ruko-2-lantai-timbun-perdana-abadi-kabupaten-bone', 'Property Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone', 'Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone, Provinsi Sulawesi Selatan Luas Tanah 4,5 x 18,5m Luas Bangunan 8 x 37m x 2Lt , Ruangan 2 Kamar tidur, 3 Kamar Mandi PLN 2000w, Air Bor Bawah Tanah Kawasan Kota, Untuk usaha Klinik, Restoran, Berbagai Usaha Harga Jual 900 Juta Nego Hubungi : (0812) 4520 7650 Alamat Kantor : Jl. Pramuka, Kabupaten Bone Email : timbunperdanaabadi@gmail.com', 'Dekat dari Pelabuhan Bajoe, Kantor Polisi, Indomaret', 'Kabupaten Bone, Sulawesi Selatan', 'Baru', 'Sertifikat Hak Milik (SHM)', 'Rp 900 Juta', '166,5', 'Selatan Barat', '2', '1', 'Tidak', '2', 'Rp 65 Juta', '84', '3', '0', 'Ya', 'Minimalis', '2000', '2023-08-03 20:43:33', '2023-08-18 22:43:07', 0),
 (94453, 'property-ruko-2-lantai-timbun-perdana-abadi-kabupaten-bone', 'Property Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone', 'Ruko 2 Lantai Timbun Perdana Abadi Kabupaten Bone, Provinsi Sulawesi Selatan Luas Tanah 4,5 x 18,5m Luas Bangunan 8 x 37m x 2Lt , Ruangan 2 Kamar tidur, 3 Kamar Mandi PLN 2000w, Air Bor Bawah Tanah Kawasan Kota, Untuk usaha Klinik, Restoran, Berbagai Usaha Harga Jual 900 Juta Nego Hubungi : (0812) 4520 7650 Alamat Kantor : Jl. Pramuka, Kabupaten Bone Email : timbunperdanaabadi@gmail.com', 'Dekat dari Pelabuhan Bajoe, Kantor Polisi, Indomaret', 'Kabupaten Bone, Sulawesi Selatan', 'Baru', 'Sertifikat Hak Milik (SHM)', 'Rp 900 Juta', '166,5', 'Selatan Barat', '2', '2', 'Tidak', '2', 'Rp 65 Juta', '84', '3', '0', 'Ya', 'Minimalis', '2000', '2023-08-03 20:43:33', '2023-08-18 22:43:22', 0),
