@@ -51,7 +51,7 @@ include "templates/sidebar.php";
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <form action="../../app/controller/proses-data-addgeoekonomi" method="post" enctype="multipart/form-data">
+              <form id="myForm" action="../../app/controller/proses-data-addgeoekonomi" method="post" enctype="multipart/form-data">
                 <input type="text" name="penulis" value="<?= $_SESSION['username'] ?>" hidden>
                 <div class="form-group">
                   <input class="form-control" name="judul" placeholder="Judul:" required>
@@ -67,12 +67,7 @@ include "templates/sidebar.php";
 
             </div>
             <!-- /.card-body -->
-            <div class="card-footer">
-              <div class="float-right">
-                <button type="button" class="btn btn-danger btn-sm" onclick="self.history.back()"> Batal</button>
-                <button type="submit" name="tambah" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah</button>
-              </div>
-            </div>
+
             <!-- /.card-footer -->
           </div>
           <!-- /.card -->
@@ -98,10 +93,14 @@ include "templates/sidebar.php";
                   </div>
                 </div>
               </div>
-              <!-- &nbsp; &nbsp;<input class="btn btn-primary btn-sm" name="tambah" type="submit" value="Tambah">
-                &nbsp;
-                <input class="btn btn-danger btn-sm" id="reset" type="reset" value="Batal"
-                  onclick="self.history.back()"> -->
+
+            </div>
+            <div class="card-footer">
+              <div class="float-right">
+                <button type="button" class="btn btn-danger btn-sm" onclick="self.history.back()"> Batal</button>
+                <input class="btn btn-primary btn-sm" name="tambah" type="submit" value="Tambah" id="submitButton">
+                
+              </div>
             </div>
             </form>
           </div>
@@ -118,6 +117,18 @@ include "templates/sidebar.php";
 </div>
 </div>
 <!-- /.content-wrapper -->
+
+<script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            // Menonaktifkan tombol "Tambah" saat formulir dikirim
+            document.getElementById("submitButton").disabled = true;
+
+            // Validasi formulir secara manual
+            if (!document.getElementById("myForm").checkValidity()) {
+                event.preventDefault(); // Mencegah pengiriman formulir
+            }
+        });
+    </script>
 
 <?php
 include "templates/footer.php";

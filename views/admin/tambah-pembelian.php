@@ -65,7 +65,7 @@ include "templates/sidebar.php";
               </div>
             </div> -->
             <div class="card-body">
-              <form action="../../app/controller/proses-data-pembelian.php" method="POST"
+              <form id="myForm" action="../../app/controller/proses-data-pembelian.php" method="POST"
                 enctype="multipart/form-data">
                 <div class="container-fluid col-sm-10">
                   <!-- your steps content here -->
@@ -121,7 +121,7 @@ include "templates/sidebar.php";
                     </div>
                     <div class="col-12">
                       <a href="data-pembelian" class="btn btn-secondary">Cancel</a>
-                      <input type="submit" name="tambah" value="Create new Data" class="btn btn-success float-right">
+                      <input type="submit" name="tambah" value="Create new Data" class="btn btn-success float-right" id="submitButton">
                     </div>
                   </div>
                 </div>
@@ -139,7 +139,17 @@ include "templates/sidebar.php";
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            // Menonaktifkan tombol "Tambah" saat formulir dikirim
+            document.getElementById("submitButton").disabled = true;
 
+            // Validasi formulir secara manual
+            if (!document.getElementById("myForm").checkValidity()) {
+                event.preventDefault(); // Mencegah pengiriman formulir
+            }
+        });
+    </script>
 <?php
 include "templates/footer.php";
 ?>

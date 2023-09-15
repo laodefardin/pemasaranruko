@@ -1,6 +1,5 @@
 <?php
 session_start();
-if (isset($_POST['tambah'])){
   // Mengatur zona waktu sesuai dengan lokasi Anda
   date_default_timezone_set('Asia/Makassar');
   // Mendapatkan tanggal sekarang
@@ -77,5 +76,4 @@ $slug = preg_replace('/-+/', '-', $slug); // Menghapus tanda hubung berulang
       // Tampilkan pesan alert
       // echo '<script>alert("Selamat anda berhasil registrasi. Silahkan Login dan Melakukan Cetak Bukti Registrasi");</script>';
       // echo "<script> document.location.href='../../views/admin/data-peserta-didik';</script>";
-    }
 ?>

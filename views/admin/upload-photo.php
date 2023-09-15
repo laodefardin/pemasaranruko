@@ -52,7 +52,7 @@ include "templates/sidebar.php";
               </div>
             </div> -->
             <div class="card-body">
-            <form action="../../app/controller/proses-upload-photo.php" method="post" enctype="multipart/form-data">
+            <form id="myForm" action="../../app/controller/proses-upload-photo.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
@@ -68,7 +68,8 @@ include "templates/sidebar.php";
                     </div>
                   </div>
                 </div>
-                &nbsp; &nbsp;<input class="btn btn-primary btn-sm" name="tambah" type="submit" value="Tambah">
+                &nbsp; &nbsp;
+                <input class="btn btn-primary btn-sm" name="tambah" type="submit" value="Tambah" id="submitButton">
                 &nbsp;
                 <input class="btn btn-danger btn-sm" id="reset" type="reset" value="Cencel"
                   onclick="self.history.back()">
@@ -86,6 +87,13 @@ include "templates/sidebar.php";
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            // Menonaktifkan tombol "Submit" saat formulir dikirim
+            document.getElementById("submitButton").disabled = true;
+        });
+    </script>
 
 <?php
 include "templates/footer.php";

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "../config/koneksi.php";
-            if (isset($_POST['tambah'])){
+            
             $currentDate = date('Y-m-d H:i:s');
             $judul= $_POST['judul'];
 			$isi_informasi= $_POST['isi_informasi'];
@@ -16,9 +16,9 @@ include "../config/koneksi.php";
             $path = "../../assets/image/foto_geoekonomi/".$gambar_baru;
 
             $slug = trim($judul); // Menghapus spasi di awal dan akhir
-$slug = strtolower($slug); // Mengubah semua huruf menjadi huruf kecil
-$slug = preg_replace('/[^a-z0-9-]/', '-', $slug); // Menghapus karakter non-alfanumerik, kecuali tanda hubung
-$slug = preg_replace('/-+/', '-', $slug); // Menghapus tanda hubung berulang
+            $slug = strtolower($slug); // Mengubah semua huruf menjadi huruf kecil
+            $slug = preg_replace('/[^a-z0-9-]/', '-', $slug); // Menghapus karakter non-alfanumerik, kecuali tanda hubung
+            $slug = preg_replace('/-+/', '-', $slug); // Menghapus tanda hubung berulang
 
                 if (empty($img)){
                     $query = "INSERT INTO tb_geoekonomi (slug, judul, penulis, isi_informasi, foto, tanggal) values('$slug','$judul','$penulis','$isi_informasi','','$currentDate')";
@@ -42,5 +42,5 @@ $slug = preg_replace('/-+/', '-', $slug); // Menghapus tanda hubung berulang
                     }
                     }
                 }
-            }
+            
             ?>
